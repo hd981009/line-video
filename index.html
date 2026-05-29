@@ -2,7 +2,7 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>YouTube → LINE 轉換工具</title>
+  <title>YouTube → LINE 自動轉換</title>
   <style>
     body { font-family: Arial; max-width: 700px; margin: 40px auto; }
     input, button { width: 100%; padding: 12px; margin-top: 10px; }
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<h2>YouTube → LINE 穩定縮圖工具</h2>
+<h2>YouTube → LINE 自動縮圖工具</h2>
 
 <input id="yt" placeholder="貼上 YouTube 連結" />
 <button onclick="gen()">產生 LINE 連結</button>
@@ -29,16 +29,16 @@ function gen(){
   const id = getId(url);
 
   if(!id){
-    document.getElementById("out").innerHTML = "無法解析 YouTube";
+    document.getElementById("out").innerHTML = "無法解析 YouTube 連結";
     return;
   }
 
-  const page = `${location.origin}${location.pathname}og.html?id=${id}`;
+  const link = `${location.origin}/line-video/og.html?id=${id}`;
 
   document.getElementById("out").innerHTML = `
-    <b>LINE 請貼這個：</b><br><br>
-    ${page}<br><br>
-    <button onclick="navigator.clipboard.writeText('${page}')">複製</button>
+    <b>✔ LINE 請貼這個：</b><br><br>
+    ${link}<br><br>
+    <button onclick="navigator.clipboard.writeText('${link}')">複製</button>
   `;
 }
 </script>
