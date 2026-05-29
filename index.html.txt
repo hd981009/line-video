@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube 影片</title>
+
+  <!-- 預設 OG（給 LINE / iOS / Desktop 抓縮圖用） -->
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="YouTube 影片" />
+  <meta property="og:description" content="點擊觀看影片" />
+  <meta property="og:image" content="https://img.youtube.com/vi/o4Eq5nF6aok/maxresdefault.jpg" />
+  <meta property="og:url" content="https://www.youtube.com/watch?v=o4Eq5nF6aok" />
+
+  <script>
+    // 自動跳轉到 YouTube
+    setTimeout(() => {
+      window.location.href = "https://www.youtube.com/watch?v=o4Eq5nF6aok";
+    }, 300);
+  </script>
+
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding: 40px;
+    }
+  </style>
+</head>
+<body>
+  正在前往 YouTube...
+</body>
+</html>
