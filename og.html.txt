@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+
+<script>
+const id = new URLSearchParams(location.search).get("id");
+
+document.write(`
+<meta property="og:title" content="YouTube 影片" />
+<meta property="og:image" content="https://img.youtube.com/vi/${id}/maxresdefault.jpg" />
+<meta property="og:url" content="https://www.youtube.com/watch?v=${id}" />
+<meta property="og:type" content="video.other" />
+
+<meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=${id}">
+`);
+</script>
+
+</head>
+<body></body>
+</html>
